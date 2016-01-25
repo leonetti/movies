@@ -1,19 +1,24 @@
-<div class="container__item">
-  <p>close</p>
-  <img ui-sref="movie" src="svg/close.svg">
-</div>
-<article>
-  <h1>Guardians of the Galaxy</h1>
-  <h2>Rated</h2>
-  <div>
-    <p>PG-13</p>
+<div class="container__selection">
+  <div class="container__selection--inner">
+    <div ui-sref="movie" class="container__close">
+      <img class="close__image" ui-sref="movie" src="svg/close.svg">
+      <p class="close__title">close</p>
+    </div>
+    <article>
+      <h1 class="selection__title">Guardians of the Galaxy</h1>
+      <div class="imaginary__image"></div>
+      <h2 class="selection__rating--title">Rated:</h2>
+      <div class="selection__rating--value">
+        <p>PG-13</p>
+      </div>
+      <p class="selection__information">Bacon ipsum dolor amet rump kielbasa tri-tip pork, hamburger tail beef strip steak capicola shoulder. Rump meatball chuck beef, filet mignon doner venison fatback flank. Swine shoulder jerky pork belly venison. Shoulder leberkas ham hock pork belly pancetta.
+      </p>
+      <p class="selection__information">Turducken porchetta swine, sirloin boudin short ribs chuck. Bresaola tri-tip capicola ham hock. Frankfurter cow sirloin doner, brisket prosciutto ground round tongue flank spare ribs turducken landjaeger. Bresaola frankfurter jowl, drumstick chicken leberkas alcatra tongue prosciutto swine boudin ham hock beef ribs salami. Meatball jowl beef ribs, boudin short loin andouille spare ribs t-bone filet mignon frankfurter bresaola chuck. Landjaeger doner corned beef alcatra, bresaola short ribs brisket jowl turducken spare ribs ham sausage.
+      </p>
+    </article>
+    <footer class="footer__buttons">
+      <button class="footer__button--trailer">Watch Trailer</button>
+      <button class="footer__button--tickets">Buy Tickets</button>
+    </footer>
   </div>
-  <p>Bacon ipsum dolor amet rump kielbasa tri-tip pork, hamburger tail beef strip steak capicola shoulder. Rump meatball chuck beef, filet mignon doner venison fatback flank. Swine shoulder jerky pork belly venison. Shoulder leberkas ham hock pork belly pancetta.
-  </p>
-  <p>Turducken porchetta swine, sirloin boudin short ribs chuck. Bresaola tri-tip capicola ham hock. Frankfurter cow sirloin doner, brisket prosciutto ground round tongue flank spare ribs turducken landjaeger. Bresaola frankfurter jowl, drumstick chicken leberkas alcatra tongue prosciutto swine boudin ham hock beef ribs salami. Meatball jowl beef ribs, boudin short loin andouille spare ribs t-bone filet mignon frankfurter bresaola chuck. Landjaeger doner corned beef alcatra, bresaola short ribs brisket jowl turducken spare ribs ham sausage.
-  </p>
-</article>
-<footer>
-  <button>Watch Trailer</button>
-  <button>Buy Tickets</button>
-</footer>
+</div>
