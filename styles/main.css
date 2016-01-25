@@ -72,15 +72,14 @@ body {
   background: -o-linear-gradient(#231e1e, #171717); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#231e1e, #171717); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#231e1e, #171717); /* Standard syntax */
-  overflow: hidden;
 }
 
 .container {
   /*background-color: white;*/
-  margin: 10px auto 0 auto;
+  margin: 0 auto;
+  padding-top: 10px;
   height: calc(100% - 20px);
   width: calc(100% - 20px);
-  overflow: hidden;
 }
 
 section {
@@ -95,6 +94,10 @@ section {
   background-color: white;
   letter-spacing: 1px;
   position: relative;
+}
+
+.container__item:last-child {
+  margin-bottom: 10px;
 }
 
 .container__item--odd {
@@ -180,10 +183,16 @@ section {
   margin-bottom: 10px;
 }
 
-.subheader__title--info {
-  color: #a3a1a1;
+.subheader__title--info,
+.subheader__title--extra {
+  color: #7d7b7b;
   font-weight: 700;
   margin-left: 55px;
+  font-size: 1.3rem;
+}
+
+.subheader__title--extra {
+  font-size: 1rem;
 }
 
 .subheader__title--movie {
@@ -203,5 +212,58 @@ section {
   fill: red;
 }
 
+.container__movies {
+  overflow: scroll;
+}
 
+footer.container__item {
+  background-color: #181b21;
+}
+
+.footer__ratings {
+  float: left;
+}
+
+.menu__ratings {
+  float: left;
+  color: #CCC;
+  font-size: 1.5rem;
+  width: 200px;
+  padding-left: 30px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.arrow__up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid red;
+  padding-top: 29px;
+  margin-left: 190px;
+}
+
+.footer__info {
+  float: right;
+  margin-top: 20px;
+}
+
+.footer__title {
+  float: right;
+  color: #CCC;
+  font-size: 1.5rem;
+  margin-top: 7px;
+  text-transform: uppercase;
+}
+
+.footer__media {
+  float: right;
+}
+
+.footer__media--twitter,
+.footer__media--facebook {
+  margin-left: 20px;
+  cursor: pointer;
+}
 

@@ -1,16 +1,49 @@
+
 <input type="search" placeholder="Search..." class="input__search container__item" name="movie">
 <section ui-sref="theater" class="container__item container__item--theater">
   <h2 class="subheader__title subheader__title--movie">The Super Great Movie Theater</h2>
-  <p class="subheader__title--info">1234 E. Entertainment Way. Santa Monica, CA 90212</p>
+  <p class="subheader__title--extra">1234 E. Entertainment Way. Santa Monica, CA 90212</p>
 </section>
 <h1 class="container__item header__title">Showings<span class="header__title--date">7/29/2014</span></h1>
-<section class="container__item container__item--odd">
-  <img ng-click="toggleHeart($event)" src="svg/heart.svg" alt="favorite movie" class="svg__heart svg__heart--unselected">
-  <h2 class="subheader__title">The Super Great Movie Theater</h2>
-  <p class="subheader__title--info">1234 E. Entertainment Way. Santa Monica, CA 90212</p>
-</section>
-<section class="container__item container__item--even">
-  <img ng-click="toggleHeart($event)" src="svg/heart.svg" alt="favorite movie" class="svg__heart svg__heart--unselected">
-  <h2 class="subheader__title">The Non Existent Movie Theater</h2>
-  <p class="subheader__title--info">5678 Do Not Click Me. Fairy Lane, CA 91234</p>
-</section>
+<div class="container__movies">
+  <section ui-sref="selection" class="container__item container__item--odd">
+    <img ng-click="toggleHeart($event)" src="svg/heart.svg" alt="favorite movie" class="svg__heart svg__heart--unselected">
+    <h2 class="subheader__title">Guardians of the Galaxy</h2>
+    <p class="subheader__title--info">3:00 PM, 3:30 PM, 7:15 PM, 7:45 PM</p>
+  </section>
+  <section class="container__item container__item--even">
+    <img ng-click="toggleHeart($event)" src="svg/heart.svg" alt="favorite movie" class="svg__heart svg__heart--unselected">
+    <h2 class="subheader__title">Hercules</h2>
+    <p class="subheader__title--info">3:00 PM, 3:30 PM, 7:15 PM, 7:45 PM</p>
+  </section>
+  <section class="container__item container__item--odd">
+    <img ng-click="toggleHeart($event)" src="svg/heart.svg" alt="favorite movie" class="svg__heart svg__heart--unselected">
+    <h2 class="subheader__title">Lucy</h2>
+    <p class="subheader__title--info">7:15 PM, 7:45 PM, 9:45 PM, 10:15 PM</p>
+  </section>
+  <section class="container__item container__item--even">
+    <img ng-click="toggleHeart($event)" src="svg/heart.svg" alt="favorite movie" class="svg__heart svg__heart--unselected">
+    <h2 class="subheader__title">Planes: Fire &amp; Rescue</h2>
+    <p class="subheader__title--info">3:00 PM, 3:30 PM, 7:15 PM, 7:45 PM</p>
+  </section>
+  <section class="container__item container__item--odd">
+    <img ng-click="toggleHeart($event)" src="svg/heart.svg" alt="favorite movie" class="svg__heart svg__heart--unselected">
+    <h2 class="subheader__title">The Hobbit: War of Five Armies</h2>
+    <p class="subheader__title--info">7:15 PM, 7:45 PM, 9:45 PM, 10:15 PM</p>
+  </section>
+</div>
+<footer class="container__item">
+  <div class="footer__ratings">
+    <ul class="menu__ratings">
+      <li>All Ratings</li>
+    </ul>
+    <div class="arrow__up"></div>
+  </div>
+  <div class="footer__info">
+    <div class="footer__media">
+      <img class="footer__media--twitter" src="svg/twitter.svg">
+      <img class="footer__media--facebook" src="svg/facebook.svg">
+    </div>
+    <h3 class="footer__title">Share</h3>
+  </div>
+</footer>

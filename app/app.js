@@ -21,6 +21,7 @@
 angular.module('movies', [
   'movies.theater',
   'movies.movie',
+  'movies.selection',
   'ui.router'
 ])
 
@@ -38,6 +39,14 @@ angular.module('movies', [
       url: '/movie',
       templateUrl: 'app/movie/movie.html',
       controller: 'movieController',
+      data: {
+        requireLogin: false
+      }
+    })
+    .state('selection', {
+      url: '/selection',
+      templateUrl: 'app/selection/selection.html',
+      controller: 'selectionController',
       data: {
         requireLogin: false
       }
