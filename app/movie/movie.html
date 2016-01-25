@@ -1,6 +1,10 @@
-<input type="search" placeholder="Search..." class="input__search container__item" name="theater">
-<h1 class="container__item header__title">Theaters</h1>
-<section ui-sref="movie" class="container__item container__item--odd">
+<input type="search" placeholder="Search..." class="input__search container__item" name="movie">
+<section ui-sref="theater" class="container__item container__item--theater">
+  <h2 class="subheader__title subheader__title--movie">The Super Great Movie Theater</h2>
+  <p class="subheader__title--info">1234 E. Entertainment Way. Santa Monica, CA 90212</p>
+</section>
+<h1 class="container__item header__title">Showings<span class="header__title--date">7/29/2014</span></h1>
+<section class="container__item container__item--odd">
   <img ng-click="toggleHeart($event)" src="svg/heart.svg" alt="favorite movie" class="svg__heart svg__heart--unselected">
   <h2 class="subheader__title">The Super Great Movie Theater</h2>
   <p class="subheader__title--info">1234 E. Entertainment Way. Santa Monica, CA 90212</p>
