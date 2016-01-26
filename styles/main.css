@@ -74,25 +74,22 @@ body {
   background: linear-gradient(#231e1e, #171717); /* Standard syntax */
 }
 
+/*Main Container*/
 .container {
-  /*background-color: white;*/
   margin: 0 auto;
   padding-top: 10px;
   height: calc(100% - 20px);
   width: calc(100% - 20px);
 }
 
-section {
-  cursor: pointer;
-}
-
+/*Items Within Container*/
 .container__item,
 .container__close {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   height: 70px;
-  background-color: white;
+  background-color: #231e1e;
   letter-spacing: 1px;
   position: relative;
 }
@@ -101,38 +98,9 @@ section {
   margin-bottom: 10px;
 }
 
-.container__item--odd {
-  background: url("../svg/arrow.svg") no-repeat #20242b;
-  background-position: right 20px center;
-  background-size: 20px;
-}
-
-.container__item--even {
-  background: url("../svg/arrow.svg") no-repeat #464f5e;
-  background-position: right 20px center;
-  background-size: 20px;
-}
-
-.container__item--theater {
-  background: #c2063b;
-  margin-bottom: 10px;
-  height: 50px;
-}
-
-.container__item--theater:before {
-  content:"";
-  float: left;
-  width: 20px;
-  height: 20px;
-  margin: 15px 15px 0 20px;
-  background: url("../svg/arrow.svg") no-repeat;
-  background-size: 20px;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
+/* Allows for the styling of search input*/
+.input__search {
+  -webkit-appearance: textfield;
 }
 
 /* Gets rid of automatic styline for search input*/
@@ -141,11 +109,6 @@ section {
 .input__search::-webkit-search-results-button,
 .input__search::-webkit-search-results-decoration {
   display: none;
-}
-
-/* Allows for the styling of search input*/
-.input__search {
-  -webkit-appearance: textfield;
 }
 
 .input__search {
@@ -162,6 +125,25 @@ section {
   font-size: 1.8rem;
 }
 
+/*Each Section is a Link*/
+section {
+  cursor: pointer;
+}
+
+/*Different Sections alternate colors*/
+.container__item--odd {
+  background: url("../svg/arrow.svg") no-repeat #20242b;
+  background-position: right 20px center;
+  background-size: 20px;
+}
+
+.container__item--even {
+  background: url("../svg/arrow.svg") no-repeat #464f5e;
+  background-position: right 20px center;
+  background-size: 20px;
+}
+
+/*The main title on each page*/
 .header__title {
   font-size: 2rem;
   text-transform: uppercase;
@@ -172,6 +154,28 @@ section {
   padding-left: 10px;
 }
 
+/**
+ * THEATER PAGE CSS:
+ */
+
+/*Styles the arrow to be flipped horizontally and floated left*/
+.container__item--theater:before {
+  content:"";
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 15px 15px 0 20px;
+  background: url("../svg/arrow.svg") no-repeat;
+  background-size: 20px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+/*Shows current movie time*/
 .header__title--date {
   float: right;
   margin-right: 10px;
@@ -184,12 +188,45 @@ section {
   margin-bottom: 10px;
 }
 
+/*subheader title extra is from movie CSS*/
 .subheader__title--info,
 .subheader__title--extra {
   color: #7d7b7b;
   font-weight: 700;
   margin-left: 55px;
   font-size: 1.3rem;
+}
+
+/**
+ * THEATER PAGE MEDIA QUERIES:
+ */
+
+@media screen and (max-width: 490px) {
+  .subheader__title--info {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .subheader__title--info {
+    font-size: .8rem;
+  }
+
+  .subheader__title {
+    padding-top: 18px;
+    font-size: 1.3rem;
+  }
+}
+
+/**
+ * MOVIE PAGE CSS:
+ */
+
+/*Shows clicked theater*/
+.container__item--theater {
+  background: #c2063b;
+  margin-bottom: 10px;
+  height: 50px;
 }
 
 .subheader__title--extra {
@@ -209,6 +246,7 @@ section {
   float: left;
 }
 
+/*Not an active class but here to show general idea*/
 .svg__heart--unselected {
   fill: red;
 }
@@ -267,6 +305,54 @@ footer.container__item {
   margin-left: 20px;
   cursor: pointer;
 }
+
+/**
+ * MOVIE PAGE MEDIA QUERIES:
+ */
+
+
+ @media screen and (max-width: 400px) {
+   .subheader__title--extra {
+     font-size: .9rem;
+   }
+
+   .subheader__title--movie {
+     padding-top: 12px;
+   }
+
+   .footer__title {
+     display: none;
+   }
+
+   .arrow__up {
+     margin-left: 150px;
+   }
+
+   .menu__ratings {
+    width: 160px;
+   }
+ }
+
+ @media screen and (max-width: 350px) {
+   .subheader__title--extra {
+     font-size: .7rem;
+   }
+
+   .subheader__title--movie {
+    padding-top: 13px;
+    font-size: 1.2rem;
+   }
+ }
+
+ @media screen and (max-width: 335px) {
+   .subheader__title {
+     font-size: 1.2rem;
+   }
+ }
+
+/**
+ * SELECTION PAGE CSS:
+ */
 
 .close__title,
 .close__image {
@@ -336,6 +422,8 @@ footer.container__item {
   height: 300px;
   background-color: #CCC;
   float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .footer__buttons {
@@ -365,4 +453,26 @@ footer.container__item {
   background-color: #222;
 }
 
+/**
+ * SELECTION PAGE MEDIA QUERIES:
+ */
 
+@media screen and (max-width: 380px) {
+  .footer__buttons {
+    width: 265px;
+  }
+
+  .footer__button--trailer,
+  .footer__button--tickets {
+    width: 110px;
+    font-size: .9rem;
+  }
+}
+
+ @media screen and (max-width: 355px) {
+   .selection__rating--title,
+   .selection__rating--value,
+   .selection__information {
+    font-size: 1rem;
+   }
+ }
