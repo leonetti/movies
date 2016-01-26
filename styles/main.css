@@ -84,7 +84,8 @@ body {
 
 /*Items Within Container*/
 .container__item,
-.container__close {
+.container__close,
+.container__footer {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -92,10 +93,6 @@ body {
   background-color: #231e1e;
   letter-spacing: 1px;
   position: relative;
-}
-
-.container__item:last-child {
-  margin-bottom: 10px;
 }
 
 /* Allows for the styling of search input*/
@@ -255,7 +252,8 @@ section {
   overflow: scroll;
 }
 
-footer.container__item {
+.container__footer {
+  margin-top: 10px;
   background-color: #181b21;
 }
 
@@ -312,8 +310,22 @@ footer.container__item {
 
 
  @media screen and (max-width: 400px) {
+   .container__movies {
+     height: auto;
+     margin-bottom: 80px;
+   }
+
+   .container__footer {
+    position: fixed;
+    bottom: 0;
+   }
+
    .subheader__title--extra {
      font-size: .9rem;
+   }
+
+   .footer__media {
+     margin-right: 40px;
    }
 
    .subheader__title--movie {
